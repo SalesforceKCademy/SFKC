@@ -4,7 +4,8 @@ import getCoursePicklistValues from '@salesforce/apex/SFKCDemoRequestController.
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 
-export default class SFKCHomeA extends LightningElement {    
+export default class SFKCHomeA extends LightningElement {  
+    //Desktop  
     @track isModalOpen = false;
     @track name = '';
     @track phone = '';
