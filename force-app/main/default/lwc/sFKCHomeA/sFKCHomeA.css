@@ -1,0 +1,45 @@
+.slds-box {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.slds-theme_info {
+    background-color: #ebf5ff;
+    border-left: 0.25rem solid #046ab7;
+}
+
+.slds-theme_default {
+    background-color: #ffffff;
+    border-left: 0.25rem solid #dddbda;
+}
+
+.slds-align_absolute-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.highlight {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 20px;
+    color: rgb(197, 31, 31);
+    display: inline-block;
+    position: relative;
+    animation: blinkHighlight 10s infinite;
+    padding: 15px;
+    background: #7caee7;
+    margin-bottom: 20px;
+    border-radius: 30px;
+}
+
+@keyframes blinkHighlight {
+    0% {
+        background: #7caee7;
+    }
+    50% {
+        background: #7caee7;
+    }
+}

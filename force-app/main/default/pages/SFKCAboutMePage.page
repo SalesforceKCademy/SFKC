@@ -1,0 +1,94 @@
+<apex:page >
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1, p {
+            color: #555;
+        }
+        h1 {
+            color: #333;
+        }
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+        .content {
+            padding-top: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .button {
+            margin-left: 10px;
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button.whatsapp {
+            background-color: #4CAF50;
+        }
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+
+    </style>
+
+  <div class="nav">
+        <a href="{!URLFOR($Page.SFKC_Home_Page)}">Home</a>
+        <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+        <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+        <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+        <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+        <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+        <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+
+
+        
+    </div>
+
+
+    <div class="content">
+        <h2>About Salesforce KCademy</h2>
+        <p>Salesforce KCademy provides teaching and job support to individuals from both IT and non-IT backgrounds. Our courses are designed to equip you with the skills needed to excel in the Salesforce ecosystem. Whether you are a beginner or an experienced professional, our comprehensive training programs will help you achieve your career goals.</p>
+        <p>Our courses include:</p>
+        <ul>
+            <li>Platform Developer I (PD1)</li>
+            <li>Lightning Web Components (LWC)</li>
+            <li>JavaScript</li>
+            <li>Salesforce Admin</li>
+            <!-- Add more courses if needed -->
+        </ul>
+        <p>💰 Course Pricing and Contact Details 💰</p>
+        <p>Course Fee: Starting from ₹15000 up to ₹50000.</p>
+        <p>EMI Option: Available. For more details:</p>
+        <p>📞 Phone: <a href="tel:+917013202237">7013202237</a></p>
+        <p>📧 Email: <a href="mailto:salesforcekcademy@gmail.com">salesforcekcademy@gmail.com</a></p>
+        <p>Stay Connected:</p>
+        <p>📸 Instagram: <a href="https://instagram.com/salesforce_kcademy?igshid=MWZjMTM2ODFkZg%3D%3D">Salesforce KCademy</a></p>
+        <p>📺 YouTube: <a href="https://www.youtube.com/user/SalesforceKCademy-KC">Salesforce KCademy</a></p>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button">Book Free Demo Class</button>
+        </a>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button whatsapp">WhatsApp</button>
+        </a>
+    </div>
+</apex:page>

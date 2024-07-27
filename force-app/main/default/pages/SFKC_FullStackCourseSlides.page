@@ -1,0 +1,182 @@
+<apex:page>
+
+    <!-- Styles -->
+    <style>
+        /* Slideshow container */
+        .slideshow-container {
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next and  previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+        }
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* Dots */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+    </style>
+
+    <!-- HTML Content -->
+    <div class="slideshow-container">
+
+        <div class="nav">
+            <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+            <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+            <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+            <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+            <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+            <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+      
+        </div>
+
+        
+    <!-- Lightning Out Dependency -->
+    <apex:includeLightning/>
+    <script>
+        $Lightning.use("c:fullStackApp", function() {
+            $Lightning.createComponent("c:fullStackCourse", {}, "lightningDiv", function(cmp) {
+                console.log("Lightning Web Component created");
+            });
+        }, "https://ncr72-dev-ed.develop.lightning.force.com");
+    </script>
+    <div id="lightningDiv"></div>
+
+
+
+        <!-- Slide 1 -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 10</div>
+            <h2>Welcome to Full Stack Development</h2>
+            <p>Become a versatile developer by mastering both front-end and back-end technologies</p>
+            <!-- <img src="/path/to/your/image1.jpg" style="width:100%"> -->
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 10</div>
+            <h2>Why Choose Full Stack Development?</h2>
+            <ul>
+                <li>High demand in the job market</li>
+                <li>Comprehensive understanding of web development</li>
+                <li>Increased problem-solving capabilities</li>
+                <li>Higher salary prospects</li>
+            </ul>
+            
+            <!-- <img src="/path/to/your/image2.jpg" style="width:100%"> -->
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 10</div>
+            <h2>Course Overview</h2>
+            <ul>
+                <li>Duration: 3 Months</li>
+                <li>Mode: Online/Offline</li>
+                <li>Prerequisites: Basic knowledge of programming</li>
+                <li>Tools: VS Code, Git, Node.js, etc.</li>
+            </ul>
+            <!-- <img src="/path/to/your/image3.jpg" style="width:100%"> -->
+        </div>
+
+        <!-- Add more slides similarly -->
+
+        <!-- Slide 10 -->
+        <div class="mySlides fade">
+            <div class="numbertext">10 / 10</div>
+            <h2>Join Us Today!</h2>
+            <p>Start your journey to becoming a full stack developer</p>
+            <p>Enroll now and transform your career!</p>
+            <!-- <img src="/path/to/your/image10.jpg" style="width:100%"> -->
+        </div>
+
+        <!-- Navigation buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&lt;</a>
+        <a class="next" onclick="plusSlides(1)">&gt;</a>
+    </div>
+
+
+    <!-- Dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <!-- Add more dots as needed -->
+        <span class="dot" onclick="currentSlide(10)"></span>
+    </div>
+
+    
+
+    <!-- Scripts -->
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+</apex:page>

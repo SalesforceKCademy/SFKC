@@ -1,0 +1,36 @@
+<apex:page >
+    <style>
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+            font: 40px;
+        }
+    </style>
+
+  <div class="nav">
+        <a href="{!URLFOR($Page.SFKC_Home_Page)}">Home</a>
+        <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+        <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+        <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+        <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+        <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+        <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+
+        
+    </div>
+    <apex:includeLightning/>
+    <div id="LightningComponentid" />
+    <script>
+        $Lightning.use("c:sfkcHomeApp", function(){
+            $Lightning.createComponent("c:sFKCHomeA", {}, "LightningComponentid");
+        });
+    </script>
+
+ 
+</apex:page>

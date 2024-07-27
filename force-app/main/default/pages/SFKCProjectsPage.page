@@ -1,0 +1,129 @@
+<apex:page >
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .course {
+            display: inline-block;
+            margin-right: 20px;
+            width: 45%;
+        }
+        .course h2 {
+            color: #0070e0;
+        }
+        .course p {
+            color: #555;
+        }
+        .button {
+            margin-left: 10px;
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button.whatsapp {
+            background-color: #4CAF50;
+        }
+        .upcoming-batches {
+            margin-top: 20px;
+            animation: blink 1s infinite;
+        }
+        .upcoming-batches h3 {
+            color: #0070e0;
+        }
+        .upcoming-batches p {
+            color: #555;
+        }
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            color: #555;
+        }
+        @keyframes blink {
+            0%, 50%, 100% {
+                opacity: 1;
+            }
+            25%, 75% {
+                opacity: 0;
+            }
+        }
+    </style>
+    
+      <div class="nav">
+        <a href="{!URLFOR($Page.SFKC_Home_Page)}">Home</a>
+        <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+        <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+        <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+        <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+        <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+        <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+
+
+    </div>
+
+
+    <h1>Salesforce Training Courses</h1>
+
+    <div class="course">
+        <h2>Salesforce Admin Training</h2>
+        <p>
+            Our Salesforce Admin Training course provides comprehensive learning
+            on Salesforce administration, covering topics such as user management,
+            security, workflow automation, and more. Get hands-on experience and
+            become a certified Salesforce Administrator.
+        </p>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button">Book Free Demo Class</button>
+        </a>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button whatsapp">WhatsApp</button>
+        </a>
+    </div>
+
+    <div class="course">
+        <h2>SFDC Developer Training</h2>
+        <p>
+            Dive into the world of Salesforce development with our SFDC Developer
+            Training. Learn to create custom applications, write Apex code, and
+            integrate with external systems. Enhance your coding skills and become
+            a certified Salesforce Developer.
+        </p>
+        <p>For more information, <a href="https://salesforcekcademy.blogspot.com/2023/09/salesforce-kcademy-platform-developer.html" target="_blank" rel="noopener noreferrer">click here to view the course curriculum</a>.</p>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button">Book Free Demo Class</button>
+        </a>
+        <a href="https://wa.me/917013202237" target="_blank" rel="noopener noreferrer">
+            <button class="button whatsapp">WhatsApp</button>
+        </a>
+    </div>
+
+    <div class="upcoming-batches">
+        <h3>Upcoming Batches</h3>
+        <p>Next batches are scheduled to start on:</p>
+        <ul>
+            <li>21st January - 2024</li>
+            <li>7th January - 2024</li>
+        </ul>
+    </div>
+</apex:page>

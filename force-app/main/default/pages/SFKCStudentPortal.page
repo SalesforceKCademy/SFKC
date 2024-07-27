@@ -1,0 +1,117 @@
+<apex:page >
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            max-height: 150px; /* Set the maximum height of the logo */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-left: 20px;
+        }
+        ul > strong {
+            margin-right: 5px;
+        }
+        @keyframes blinkHighlight {
+            0% {
+                background-color: #FFD700;  /* Gold background color */
+                color: #FF4500;  /* Orange text color */
+            }
+            50% {
+                background-color: transparent;
+                color: #FFD700;  /* Gold text color */
+            }
+            100% {
+                background-color: #FFD700;
+                color: #FF4500;  /* Orange text color */
+            }
+        }
+        .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+        .content {
+            padding-top: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .button {
+            margin-left: 10px;
+            text-decoration: none;
+            background-color: blue;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button.whatsapp {
+            background-color: #4CAF50;
+        }
+        .highlight {
+            overflow: hidden;
+            white-space: nowrap;
+            width: 100%;
+            font-size: 20px; /* Increased font size */
+            color: black; /* Orange text color */
+            display: inline-block;
+            position: relative; /* Add position for pseudo-element */
+            animation: blinkHighlight 2s infinite; /* Blinking highlight effect */
+            padding: 15px;
+            background: #FFD700; /* Gold background color */
+            margin-bottom: 20px; /* Add margin for separation */
+            border-radius: 30px; /* Adjust the border-radius for a cloud-like shape */
+        }
+        .highlight:before {
+            content: '';
+            position: absolute;
+            top: -10px; /* Adjust the positioning */
+            left: -10px; /* Adjust the positioning */
+            right: -10px; /* Adjust the positioning */
+            bottom: -10px; /* Adjust the positioning */
+            border-radius: 40px; /* Adjust the border-radius for a cloud-like shape */
+            border: 10px solid #FFD700; /* Gold border */
+            z-index: -1; /* Move the pseudo-element below the text */
+        }
+    </style>
+
+  <div class="nav">
+    <a href="{!URLFOR($Page.SFKC_Home_Page)}">Home</a>
+    <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+    <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+    <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+    <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+    <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+    <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+
+        
+    </div>
+
+    <div style="text-align: center">
+        
+        <h1>🌟 Salesforce KCademy - Platform Developer and Admin Training 🌟</h1>
+        <p>A way to Master Salesforce and Get Certified</p>
+    </div>
+
+    <div style="button">
+        <a href="{!URLFOR($Page.SFKCTestPage)}">Start Test</a>
+
+    </div>
+
+
+</apex:page>

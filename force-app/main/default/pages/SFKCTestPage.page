@@ -1,0 +1,41 @@
+
+<apex:page controller="SFKCTestController" showHeader="false" sidebar="false">
+    <script>
+        // Timer function
+        var timeLeft = 1800;
+        var timer = setInterval(function() {
+            timeLeft--;
+            document.getElementById('timer').textContent = 'Time remaining: ' + Math.floor(timeLeft / 60) + 'm ' + (timeLeft % 60) + 's';
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.getElementById('testForm').submit();
+            }
+        }, 1000);
+    </script>
+
+    <apex:form id="testForm">
+        <h1>Salesforce Knowledge Test</h1>
+        <div id="timer" style="font-weight:bold; color: red;">Time remaining: 30m 0s</div>
+
+        <apex:pageMessages />
+        
+        <apex:repeat value="{!questions}" var="q">
+            <div>
+                <h3>Question {!q.question}</h3>
+                <apex:selectRadio value="{!q.selectedOption}">
+                    <apex:selectOptions value="{!q.options}" />
+                </apex:selectRadio>
+            </div>
+            <hr/>
+        </apex:repeat>
+        
+        <!-- <apex:commandButton value="Submit Test" action="{!submit}" /> -->
+        <apex:outputPanel rendered="{!NOT(isSubmitted)}">
+            <apex:commandButton value="Submit Test" action="{!submit}" />
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!isSubmitted}">
+            <p>Your test has been submitted successfully.</p>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

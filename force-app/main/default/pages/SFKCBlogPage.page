@@ -1,0 +1,107 @@
+<apex:page >
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Salesforce KCademy Blog</title>
+        <style>
+            body {
+                font-family: 'Arial, sans-serif';
+                margin: 20px;
+                line-height: 1.6;
+            }
+
+            h1, h2, h3 {
+                color: #333;
+            }
+
+            .video-section, .blog-section, .recent-blog-section {
+                margin-bottom: 40px;
+            }
+
+            .video-section iframe {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .blog-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .blog-list li {
+                margin-bottom: 10px;
+            }
+
+            .recent-blog {
+                background-color: #f9f9f9;
+                padding: 20px;
+                border-radius: 5px;
+            }
+            .nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #0070e0;
+            font-weight: bold;
+        }
+
+        </style>
+    </head>
+    <body>
+          <div class="nav">
+            <a href="{!URLFOR($Page.SFKC_Home_Page)}">Home</a>
+            <a href="{!URLFOR($Page.SFKCAboutMePage)}">About Me</a>
+            <a href="{!URLFOR($Page.SFKCProjectsPage)}">Courses</a>
+            <a href="{!URLFOR($Page.SFKCBlogPage)}">Blog</a>
+            <a href="{!URLFOR($Page.SFKCContactPage)}">Contact</a>
+            <a href="{!URLFOR($Page.SFKCStudentPortal)}">Student Portal</a>
+            <a href="{!URLFOR($Page.SFKC_FullStackCourseSlides)}">Full Stack Course</a>
+
+
+    </div>
+
+        <div style="text-align: center;">
+            <h1>🌟 Salesforce KCademy Blog 🌟</h1>
+            <p>Stay updated with the latest tutorials and news</p>
+        </div>
+
+        <!-- YouTube Video Section -->
+           <div class="video-section">
+            <h2>📺 Featured Videos 📺</h2>
+            <div>
+                <iframe width="560" height="315" src="https://youtu.be/yVIeyUXEWII?si=_cqmG22foGp82pxO" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+            <div>
+                <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0jH3nauft64&list=PLNBZoUInTXzXgZgl5CFX8EfgehJnNxEFG&pp=iAQB" frameborder="0" allowfullscreen="true"></iframe>
+            </div>
+            <!-- Add more videos as needed -->
+        </div>
+
+        <!-- Blog List Section -->
+        <div class="blog-section">
+            <h2>📝 Class Notes for batch 07072024 📝</h2>
+            <ul class="blog-list">
+                <li><a href="https://salesforcekcademy.blogspot.com/2024/07/introduction-to-soql-salesforce-object.html" target="_blank">Understanding Salesforce SOQL</a></li>
+                <li><a href="https://salesforcekcademy.blogspot.com/2023/08/salesforce-objects.html" target="_blank">Getting Started with Salesforce Objects</a></li>
+                <li><a href="https://salesforcekcademy.blogspot.com/2023/07/understanding-salesforce-unleashing.html" target="_blank">Understanding Salesforce: Unleashing the Power of Cloud-Based CRM</a></li>
+                <li><a href="https://salesforcekcademy.blogspot.com/2024/01/questions-on-salesforce-objects-and.html" target="_blank">Questions on Salesforce Objects and Fields</a></li>
+                <!-- Add more blog links as needed -->
+            </ul>
+        </div>
+
+        <!-- Recent Blog Post Section -->
+        <div class="recent-blog-section">
+            <h2>📰 Recent Blog Post 📰</h2>
+            <div class="recent-blog">
+                <h3>Mastering Salesforce SOQL</h3>
+                <p>SOQL (Salesforce Object Query Language) is a powerful tool to query data in Salesforce. In this blog, we will explore the basics of SOQL, advanced querying techniques, and best practices.</p>
+                <p><a href="https://salesforcekcademy.blogspot.com/2024/07/introduction-to-soql-salesforce-object.html" target="_blank">Read more...</a></p>
+            </div>
+        </div>
+    </body>
+    </html>
+</apex:page>
