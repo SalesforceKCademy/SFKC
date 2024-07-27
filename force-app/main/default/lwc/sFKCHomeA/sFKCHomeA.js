@@ -5,7 +5,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 
 
 export default class SFKCHomeA extends LightningElement {  
-    //Mobile  
+    //Desktop  
     @track isModalOpen = false;
     @track name = '';
     @track phone = '';
