@@ -10,11 +10,9 @@
             <p class="slds-text-title_bold">A way to Master Salesforce and Get Certified</p>
 
             <div class="slds-align_absolute-center slds-m-bottom_medium">
-                <lightning-button label="Book Free Demo Class" variant="brand"
-                    onclick={handleOpenModal}></lightning-button>
+                <lightning-button label="Book Free Demo Class" variant="brand" onclick={handleOpenModal}></lightning-button>
                 <lightning-button label="WhatsApp" variant="success" onclick={openWhatsAppLink}></lightning-button>
             </div>
-
         </div>
 
         <div class="slds-box slds-box_x-small slds-theme_info slds-m-bottom_medium highlight">
@@ -23,26 +21,23 @@
             <p class="slds-text-heading_medium slds-text-color_inverse">15th July 2024</p>
             <p class="slds-text-heading_medium slds-text-color_inverse">21st July 2024</p>
         </div>
+
         <div>
             <h2 class="slds-text-heading_medium">🚀 Why Choose Our Salesforce Training? 🚀</h2>
         </div>
+
         <div class="slds-grid slds-wrap slds-gutters">
-            <div class="slds-col slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                 <div class="slds-box slds-box_x-small slds-theme_default slds-m-around_medium">
                     <ul class="slds-list_dotted">
-                        <li><strong>Industry-Leading Curriculum:</strong> Our course content is designed by Salesforce
-                            veterans. Experience best-in-class training tailored to current industry demands.</li>
-                        <li><strong>Weekly Mock Interviews:</strong> Boost your confidence with regular real-world job
-                            interview practice.</li>
-                        <li><strong>Holistic Developer Training:</strong> Dive deeper than Salesforce with training in
-                            essential tools like: GitHub, Jenkins, Slack, PMD.</li>
-                        <li><strong>Coding for Everyone:</strong> No IT background? No worries! We'll transform you
-                            with: HTML, CSS, JavaScript, OOPs Concepts, Apex, SOQL, SOSL, Lightning Web Components
-                            (LWC).</li>
+                        <li><strong>Industry-Leading Curriculum:</strong> Our course content is designed by Salesforce veterans. Experience best-in-class training tailored to current industry demands.</li>
+                        <li><strong>Weekly Mock Interviews:</strong> Boost your confidence with regular real-world job interview practice.</li>
+                        <li><strong>Holistic Developer Training:</strong> Dive deeper than Salesforce with training in essential tools like: GitHub, Jenkins, Slack, PMD.</li>
+                        <li><strong>Coding for Everyone:</strong> No IT background? No worries! We'll transform you with: HTML, CSS, JavaScript, OOPs Concepts, Apex, SOQL, SOSL, Lightning Web Components (LWC).</li>
                     </ul>
                 </div>
             </div>
-            <div class="slds-col slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                 <div class="slds-box slds-box_x-small slds-theme_default slds-m-around_medium">
                     <h3 class="slds-text-heading_small">Personalized Attention:</h3>
                     <ul class="slds-list_dotted">
@@ -51,15 +46,13 @@
                     </ul>
                 </div>
             </div>
-            <div class="slds-col slds-size_1-of-3">
+            <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
                 <div class="slds-box slds-box_x-small slds-theme_default slds-m-around_medium">
                     <h3 class="slds-text-heading_small">Career Support:</h3>
                     <ul class="slds-list_dotted">
                         <li><strong>Resume Building:</strong> Let's craft your impressive resume.</li>
-                        <li><strong>Job Assistance:</strong> Tap into our industry connections to find your dream job.
-                        </li>
-                        <li><strong>Tailored for Professionals and Graduates:</strong> From admin functionalities to
-                            advanced coding, we cater to everyone!</li>
+                        <li><strong>Job Assistance:</strong> Tap into our industry connections to find your dream job.</li>
+                        <li><strong>Tailored for Professionals and Graduates:</strong> From admin functionalities to advanced coding, we cater to everyone!</li>
                     </ul>
                 </div>
             </div>
@@ -72,10 +65,8 @@
             <p>📞 Phone: <a href="tel:+917013202237">7013202237</a></p>
             <p>📧 Email: <a href="mailto:salesforcekcademy@gmail.com">salesforcekcademy@gmail.com</a></p>
             <p>Stay Connected:</p>
-            <p>📸 Instagram: <a href="https://instagram.com/salesforce_kcademy?igshid=MWZjMTM2ODFkZg%3D%3D"
-                    target="_blank">Salesforce KCademy</a></p>
-            <p>📺 YouTube: <a href="https://www.youtube.com/user/SalesforceKCademy-KC" target="_blank">Salesforce
-                    KCademy</a></p>
+            <p>📸 Instagram: <a href="https://instagram.com/salesforce_kcademy?igshid=MWZjMTM2ODFkZg%3D%3D" target="_blank">Salesforce KCademy</a></p>
+            <p>📺 YouTube: <a href="https://www.youtube.com/user/SalesforceKCademy-KC" target="_blank">Salesforce KCademy</a></p>
         </div>
 
         <div class="slds-align_absolute-center slds-m-bottom_medium">
@@ -83,16 +74,13 @@
             <lightning-button label="WhatsApp" variant="success" onclick={openWhatsAppLink}></lightning-button>
         </div>
 
-
         <!-- Popup Modal -->
         <template if:true={isModalOpen}>
             <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open">
                 <div class="slds-modal__container">
                     <header class="slds-modal__header">
-                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
-                            title="Close" onclick={handleCloseModal}>
-                            <lightning-icon icon-name="utility:close" alternative-text="close"
-                                size="small"></lightning-icon>
+                        <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={handleCloseModal}>
+                            <lightning-icon icon-name="utility:close" alternative-text="close" size="small"></lightning-icon>
                             <span class="slds-assistive-text">Close</span>
                         </button>
                         <h2 class="slds-text-heading_medium">Book Free Demo Class</h2>
@@ -100,22 +88,16 @@
                     <div class="slds-modal__content slds-p-around_medium">
                         <lightning-input label="Name" value={name} onchange={handleNameChange}></lightning-input>
                         <lightning-input label="Phone" value={phone} onchange={handlePhoneChange}></lightning-input>
-                        <lightning-combobox label="Course" placeholder="Select Course" options={courseOptions}
-                            value={course} onchange={handleCourseChange}></lightning-combobox>
-                        <lightning-textarea label="Questions" value={questions}
-                            onchange={handleQuestionsChange}></lightning-textarea>
+                        <lightning-combobox label="Course" placeholder="Select Course" options={courseOptions} value={course} onchange={handleCourseChange}></lightning-combobox>
+                        <lightning-textarea label="Questions" value={questions} onchange={handleQuestionsChange}></lightning-textarea>
                     </div>
                     <footer class="slds-modal__footer">
-                        <lightning-button variant="neutral" label="Cancel"
-                            onclick={handleCloseModal}></lightning-button>
+                        <lightning-button variant="neutral" label="Cancel" onclick={handleCloseModal}></lightning-button>
                         <lightning-button variant="brand" label="Submit" onclick={handleSubmit}></lightning-button>
                     </footer>
                 </div>
             </section>
             <div class="slds-backdrop slds-backdrop_open"></div>
         </template>
-
     </lightning-card>
-
-
 </template>
